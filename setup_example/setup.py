@@ -5,7 +5,8 @@ from os import system as sys
 
 cfile='impl_in_C'
 newmodule='newModule'
-shared_obj=f'gcc {cfile}.c -fPIC -c -o {cfile}.o'
+_compiling_options=""
+shared_obj=f'gcc {cfile}.c -fPIC -c {_compiling_options} -o {cfile}.o'
 print(shared_obj)
 sys(shared_obj)
 
